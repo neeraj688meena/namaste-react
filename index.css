@@ -1,4 +1,8 @@
-#heading {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* #heading {
   color: red;
 }
 
@@ -60,7 +64,6 @@
   background-color: aliceblue;
 }
 
-/* Header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -72,7 +75,6 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-/* Logo */
 .logo-container img {
   width: 70px;
   height: 70px;
@@ -80,7 +82,6 @@
   cursor: pointer;
 }
 
-/* Navigation */
 .nav-items {
   display: flex;
   align-items: center;
@@ -95,10 +96,9 @@
 }
 
 .nav-items div:hover {
-  color: #fc8019; /* Swiggy orange */
+  color: #fc8019;
 }
 
-/* Button */
 .nav-items button {
   padding: 8px 18px;
   border: none;
@@ -115,7 +115,6 @@
   background-color: #e96d0c;
 }
 
-/* Container for Search + Filter */
 .buttonContainer {
   display: flex;
   justify-content: space-between;
@@ -124,14 +123,12 @@
   margin: 20px 0;
 }
 
-/* Search Section */
 .searchConatiner {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* Search Input */
 .searchConatiner input {
   width: 280px;
   padding: 10px 15px;
@@ -146,7 +143,6 @@
   box-shadow: 0 0 5px rgba(252, 128, 25, 0.3);
 }
 
-/* Common Button Style */
 .search-btn,
 .filter-btn {
   padding: 10px 18px;
@@ -160,14 +156,12 @@
   transition: all 0.3s ease;
 }
 
-/* Hover Effect */
 .search-btn:hover,
 .filter-btn:hover {
   background-color: #e96d0c;
   transform: translateY(-2px);
 }
 
-/* Filter Button */
 .filter-btn {
   white-space: nowrap;
 }
@@ -177,4 +171,4 @@
   border-radius: 10px;
   background-color: #fc8019;
   width: 200px;
-}
+} */

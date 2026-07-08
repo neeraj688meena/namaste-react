@@ -1,5 +1,5 @@
 import { resData } from "../utils/mockData";
-import Card from "./Card";
+import Card, { LabelCard } from "./Card";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { SWIGGY_API } from "../utils/constant";
@@ -11,6 +11,8 @@ const Body = () => {
   const [filterUser, setFilterUser] = useState([]);
   const [searchText, setSearchText] = useState("");
   const onlineStatus = useOnlineStatus();
+
+  const VegCard = LabelCard(Card);
 
   useEffect(() => {
     fetchData();
@@ -38,21 +40,20 @@ const Body = () => {
     return <h1>Looks like you are offline, please check your internet</h1>;
   }
 
-  console.log("filterUser--", filterUser);
-
   return (
-    <div className="layout">
-      <div className="userHeading">
-        <div className="buttonContainer">
+    <div className="layout px-3">
+      <div className="py-3">
+        <div className="flex flex-row justify-between">
           <div className="searchConatiner">
             <input
+              // className="w-52 border-2 border-[#dcdcdc] rounded-md px-2 py-1 outline-none"
               type="text"
               value={searchText}
               onChange={(e) => setSearchText(e.target.value)}
               placeholder="Search restaurants..."
             />
             <button
-              className="search-btn"
+              className="rounded-md border-none text-white px-2 py-1 outline-none bg-[#fc8019] cursor-pointer transition-all duration-300 ease-in-out"
               onClick={() => {
                 const search = searchText.trim().toLowerCase();
 
@@ -77,10 +78,10 @@ const Body = () => {
           </button>
         </div>
       </div>
-      <div className="userList">
+      <div className="flex flex-wrap gap-10 rounded-md">
         {filterUser.map((item) => (
           <Link to={`/restaurant/${item.info.id}`} key={item.info.id}>
-            <Card data={item} />
+            {item.info.veg ? <VegCard data={item} /> : <Card data={item} />}
           </Link>
         ))}
       </div>

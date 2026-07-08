@@ -3,11 +3,11 @@ import User from "./User";
 
 const About = () => {
   const [count, setCount] = useState(0);
-  useEffect(() => {
-    console.log("about useeffect render");
-  }, [count]);
+  // useEffect(() => {
+  //   console.log("about useeffect render");
+  // }, [count]);
 
-  console.log("about render");
+  // console.log("about render");
 
   return (
     <div className="about">

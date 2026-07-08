@@ -9,7 +9,10 @@ const useRestaurantMenu = (resId) => {
 
   const fetchMenu = async () => {
     try {
-      const apiUrl = `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=25.2237635&lng=75.8809701&restaurantId=${resId}`;
+      // const apiUrl = `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=25.2237635&lng=75.8809701&restaurantId=${resId}`;
+
+      const apiUrl =
+        "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=25.2237635&lng=75.8809701&restaurantId=81945&catalog_qa=undefined&submitAction=ENTER";
 
       const response = await fetch(apiUrl);
 
